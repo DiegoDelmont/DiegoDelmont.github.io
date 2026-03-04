@@ -328,9 +328,11 @@ body { background-color: #fff; color: #333333; font-family: 'Helvetica Neue', He
 
 .image { width: 238px; height: 162px; background-color: #000000; }
 
-.square { width: 363.5px; }
+.square { width: 363.5px; height: 363.5px; background-color: #573ee370; }
 
-.row { display: flex; gap: 50px 100px; justify-content: space-between; flex-wrap: wrap; }
+.project_row { display: flex; gap: 50px 100px; justify-content: space-between; flex-wrap: wrap; }
+
+.text-bubble { background-color: #ce5e5e; border-radius: 15px; padding: 7px 10px; display: inline-block; max-width: 300px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
 
 footer.site-footer { color: #444444; font-size: 1em; }
 

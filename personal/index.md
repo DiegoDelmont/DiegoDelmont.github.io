@@ -2,7 +2,7 @@
 title: "Personal Projects"
 ---
 <div>
-    <div class="row">
+    <div class="project_row">
         <div class="square">
             <div class="image"></div>
             <div class="caption">

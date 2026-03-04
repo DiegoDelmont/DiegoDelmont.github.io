@@ -2,25 +2,33 @@
 title: "Professional Experience"
 ---
 <div>
-    <div class="row">
+    <div class="project_row">
         <div class="square">
-            <div class="image"></div>
+            <div>
+                <img src="/assets/img/Unsent_banner.png" alt="…">
+            </div>
             <div class="caption">
-            Project title
-            <br/>
-            this is a different game about something different
-            <br/>
-            Role: blank
+                <b>Unsent</b>
+                <br/>
+                A wacky 3D platformer set in a labyrinthine 1970's inspired post office.
+                <br/>
+                <div class="text-bubble">
+                    3D Artist
+                </div>
             </div>
         </div>
         <div class="square">
-            <div class="image"></div>
+            <div>
+                <img src="/assets/img/ReelTiny_banner.png" alt="…">
+            </div>
             <div class="caption">
-            Project title
-            <br/>
-            this game is about a game vlah blah
-            <br/>
-            Role: blank
+                <b>Reel Tiny</b>
+                <br/>
+                this game is about a game vlah blah
+                <br/>
+                <div class="text-bubble">
+                    3D Artist
+                </div>
             </div>
         </div>
     </div>
