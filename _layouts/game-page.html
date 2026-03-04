@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
-  <body>
+  <body class="game-page">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
@@ -28,35 +28,13 @@
 
     <main id="content" class="main-content" role="main">
 
+      <img src="banner.png">
 
+      <h1>
+        {{ page.title }}
+      </h1>
+      
       {{ content }}
-
-      <div>
-        <div class="project_row">
-          {% for p in site.pages %}
-            {% if p.url != page.url and p.url contains page.dir and p.name == "index.md" %}
-              <div class="square">
-                <div>
-                  <a href="{{ p.url }}">
-                    <img class="thmbnl" src="{{ p.url }}banner.png" alt="failed to load thumbnail">
-                  </a>
-                </div>
-                <div class="caption">
-                  <big><b><a href="{{ p.url }}">{{ p.title | default: p.name }}</a></b></big>, {{ p.year }}
-                  <br/>
-                  {% if p.description %}{{ p.description }}<br/>{% endif %}
-                  {% if p.roles %}
-                    {% for role in p.roles %}
-                      <div class="text-bubble role-{{ role | slugify }}">
-                        {{ role }}
-                      </div>
-                    {% endfor %}
-                  {% endif %}
-                </div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
 
       <footer class="site-footer">
         <h2>Contact Me!</h2>

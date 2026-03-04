@@ -326,13 +326,21 @@ a:hover { text-decoration: underline; }
 
 body { background-color: #fff; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; }
 
-img.thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ease; }
+.caption big a, .caption big a:link, .caption big a:visited { color: black; text-decoration: none; }
+
+.caption big a:hover, .caption big a:active { text-decoration: underline; }
+
+img.thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ease; filter: brightness(0.5); transition: filter 0.3s ease; }
 
 .square { width: 363.5px; height: 363.5px; background-color: #573ee370; }
 
 .project_row { display: flex; gap: 50px 100px; justify-content: space-between; flex-wrap: wrap; }
 
 .text-bubble { background-color: #ce5e5e; border-radius: 15px; padding: 7px 10px; display: inline-block; max-width: 300px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+
+.text-bubble.role-play-tester { background-color: #bd5ece; }
+
+.text-bubble.role-3d-modeler { background-color: #ce5e5e; }
 
 footer.site-footer { color: #444444; font-size: 1em; }
 
