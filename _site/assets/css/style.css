@@ -321,3 +321,17 @@ a:hover { text-decoration: underline; }
 .site-footer-owner { display: block; font-weight: bold; }
 
 .site-footer-credits { color: #819198; }
+
+.page-header { color: #fff; background-color: #EBBD88; background-image: linear-gradient(230deg, #000000, #4d4d4d); }
+
+body { background-color: #fff; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; }
+
+.image { width: 238px; height: 162px; background-color: #000000; }
+
+.square { width: 363.5px; }
+
+.row { display: flex; gap: 50px 100px; justify-content: space-between; flex-wrap: wrap; }
+
+footer.site-footer { color: #444444; font-size: 1em; }
+
+footer.site-footer h2 { color: #095fb6; font-size: 2.5em; margin-bottom: 0; }
