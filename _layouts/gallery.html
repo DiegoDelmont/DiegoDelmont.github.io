@@ -44,10 +44,13 @@
                 <div class="caption">
                   <big><b><a href="{{ p.url }}">{{ p.title | default: p.name }}</a></b></big>, {{ p.year }}
                   <br/>
-                  {% if p.description %}{{ p.description }}<br/>{% endif %}
+                  {% if p.from %}
+                    <small><big><a href="{{ p.link }}">{{ p.from }}</a></big></small>
+                  <br/>
+                  {% endif %}
                   {% if p.roles %}
                     {% for role in p.roles %}
-                      <div class="text-bubble role-{{ role | slugify }}">
+                      <div class="text-bubble role-{{ role | slugify }}" style="font-size: 14px; color: white;">
                         {{ role }}
                       </div>
                     {% endfor %}

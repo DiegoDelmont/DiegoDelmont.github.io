@@ -32,14 +32,14 @@ body {
 img.thmbnl:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease; 
-    filter: brightness(.5);
+    filter: brightness(0.8);
     transition: filter 0.3s ease;
 }
 
 .square {
     width: 363.5px;
     height: 363.5px;
-    background-color: #573ee370;
+    // visual ref for size background-color: #573ee370;
 }
 
 .project_row {
@@ -51,20 +51,23 @@ img.thmbnl:hover {
 
 //role tags
 .text-bubble {
-    background-color: #ce5e5e;
-    border-radius: 15px;
-    padding: 7px 10px;
+    border-radius: 10px;
+    padding: 3px 5px;
     display: inline-block;
     max-width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 //role colors
 .text-bubble.role-play-tester {
-    background-color: #bd5ece;
+    background-color: #ac3ea1;
 }
-
 .text-bubble.role-3d-modeler {
-    background-color: #ce5e5e;
+    background-color: #ac3e3e;
+}
+.text-bubble.role-programmer {
+    background-color: #3e47ac;
+}
+.text-bubble.role-designer {
+    background-color: #ac9c3e;
 }
 
 // footer styling
