@@ -326,7 +326,7 @@ a:hover { text-decoration: underline; }
 
 body { background-color: #fff; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; }
 
-.image { width: 238px; height: 162px; background-color: #000000; }
+img.thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ease; }
 
 .square { width: 363.5px; height: 363.5px; background-color: #573ee370; }
 

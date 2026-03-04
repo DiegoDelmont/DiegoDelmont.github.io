@@ -19,11 +19,11 @@ body {
 }
 
 // project organization n placeholders
-.image {
-    width: 238px;
-    height: 162px;
-    background-color: #000000;
+img.thmbnl:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;    
 }
+
 
 .square {
     width: 363.5px;
@@ -40,12 +40,12 @@ body {
 
 //role tags
 .text-bubble {
-  background-color: #ce5e5e;
-  border-radius: 15px;
-  padding: 7px 10px;
-  display: inline-block;
-  max-width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ce5e5e;
+    border-radius: 15px;
+    padding: 7px 10px;
+    display: inline-block;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 // footer styling
