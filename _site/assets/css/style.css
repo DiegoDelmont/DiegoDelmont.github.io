@@ -322,6 +322,8 @@ a:hover { text-decoration: underline; }
 
 .site-footer-credits { color: #819198; }
 
+a.underlined { text-decoration: underline !important; }
+
 .page-header { color: #fff; background-color: #EBBD88; background-image: linear-gradient(230deg, #000000, #4d4d4d); }
 
 body { background-color: #fff; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; }

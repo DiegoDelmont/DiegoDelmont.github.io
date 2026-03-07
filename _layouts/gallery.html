@@ -23,6 +23,7 @@
       <a href="/personal" class="btn">Personal</a>
       <a href="/modeling" class="btn">3D Modeling</a>
       <a href="/ui_ux" class="btn">UI/UX</a>
+      <a href="/design" class="btn">Game Design</a>
 
     </header>
 
@@ -45,7 +46,7 @@
                   <big><b><a href="{{ p.url }}">{{ p.title | default: p.name }}</a></b></big>, {{ p.year }}
                   <br/>
                   {% if p.from %}
-                    <small><big><a href="{{ p.link }}">{{ p.from }}</a></big></small>
+                    <small><big><a target="_blank" href="{{ p.link }}">{{ p.from }}</a></big></small>
                   <br/>
                   {% endif %}
                   {% if p.roles %}

@@ -3,6 +3,12 @@
 
 @import "{{ site.theme }}";
 
+
+// link styling
+a.underlined {
+    text-decoration: underline !important;
+}
+
 // gradient and header
 .page-header { 
     color: #fff; 
