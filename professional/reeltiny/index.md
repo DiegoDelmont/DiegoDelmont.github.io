@@ -10,13 +10,9 @@ roles:
   - Play-Tester
 ---
 
-this is my favorite game
+<h1 style="color: black;"><b> Reel Tiny </b></h1>
 
-# Details
-
-It's very deep
-
-It's wet
+pitch
 
 # Credits
 
