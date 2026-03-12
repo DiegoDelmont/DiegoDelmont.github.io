@@ -338,6 +338,12 @@ img.thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ease; filt
 
 .project_row { display: flex; gap: 50px 100px; justify-content: space-between; flex-wrap: wrap; }
 
+.photo-gallery { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
+
+.photo-gallery > div { flex: 1 1 calc(33.333% - 10px); min-width: 200px; }
+
+.photo-gallery img.thmbnl { width: 100%; height: auto; object-fit: cover; border-radius: 8px; }
+
 .text-bubble { border-radius: 10px; padding: 3px 5px; display: inline-block; max-width: 300px; }
 
 .text-bubble.role-play-tester { background-color: #ac3ea1; }

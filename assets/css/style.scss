@@ -55,6 +55,26 @@ img.thmbnl:hover {
     flex-wrap: wrap;
 }
 
+//GALLERY
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.photo-gallery > div {
+  flex: 1 1 calc(33.333% - 10px);
+  min-width: 200px;
+}
+
+.photo-gallery img.thmbnl {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 //role tags
 .text-bubble {
     border-radius: 10px;

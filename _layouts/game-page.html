@@ -16,11 +16,10 @@
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 style="color: black;"><b>{{ page.title | default: site.title | default: site.github.repository_name }}</b></h1>
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       <a href="/" class="btn">About Me</a>
       <a href="/professional" class="btn">Professional</a>
-      <a href="/personal" class="btn">Personal</a>
       <a href="/modeling" class="btn">3D Modeling</a>
       <a href="/ui_ux" class="btn">UI/UX</a>
       <a href="/design" class="btn">Game Design</a>
@@ -28,13 +27,22 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-
+      <!-- thumbnail -->
       <img src="banner.png">
+      <!-- title -->
+      <h1 style="color: black;"> <i> {{ page.title }} </i></h1>
+      <!-- long description -->
+      <div>{{page.long_description}}</div>
 
-      <h1>
-        {{ page.title }}
-      </h1>
-
+      <div class="photo-gallery">
+        {% for p in site.static_files %}
+          {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' %}
+            <div>
+              <img class="thmbnl" src="{{ p.path }}" alt="photo">
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
       {{ content }}
 
       <footer class="site-footer">
