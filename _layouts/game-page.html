@@ -20,6 +20,7 @@
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
       <a href="/" class="btn">About Me</a>
       <a href="/professional" class="btn">Professional</a>
+      <a href="/personal" class="btn">Personal</a>
       <a href="/modeling" class="btn">3D Modeling</a>
       <a href="/ui_ux" class="btn">UI/UX</a>
       <a href="/design" class="btn">Game Design</a>
@@ -30,16 +31,27 @@
       <!-- thumbnail -->
       <img src="banner.png">
       <!-- title -->
-      <h1 style="color: black;"> <i> {{ page.title }} </i></h1>
+      <i style="color: black; font-size: 62px;"> <b>{{page.title}}</b> </i>
       <!-- long description -->
       <div>{{page.long_description}}</div>
 
       <div class="photo-gallery">
         {% for p in site.static_files %}
-          {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' %}
+          {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' or p.extname == '.jpg' or p.extname == '.png' %}
             <div>
-              <img class="thmbnl" src="{{ p.path }}" alt="photo">
+              <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
             </div>
+          {% elsif p.path contains page.dir and p.path contains '/photos/' and p.extname == '.txt' %}
+            <iframe
+              class="thmbnl"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/{{ p.basename }}?loop=1&playlist={{ p.basename }}"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
+              allowfullscreen>
+            </iframe>
           {% endif %}
         {% endfor %}
       </div>

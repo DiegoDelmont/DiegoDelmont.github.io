@@ -3,7 +3,6 @@
 
 @import "{{ site.theme }}";
 
-
 // link styling
 a.underlined {
     text-decoration: underline !important;
@@ -35,7 +34,7 @@ body {
 }
 
 // project organization n placeholders
-img.thmbnl:hover {
+img.project-thmbnl:hover{
     transform: scale(1.05);
     transition: transform 0.3s ease; 
     filter: brightness(0.8);
@@ -45,7 +44,7 @@ img.thmbnl:hover {
 .square {
     width: 363.5px;
     height: 363.5px;
-    // visual ref for size background-color: #573ee370;
+    // boudns for each thing
 }
 
 .project_row {
@@ -68,7 +67,14 @@ img.thmbnl:hover {
   min-width: 200px;
 }
 
-.photo-gallery img.thmbnl {
+.photo-gallery img.project-thmbnl {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.photo-gallery img.gallery-thmbnl {
   width: 100%;
   height: auto;
   object-fit: cover;

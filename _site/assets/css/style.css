@@ -332,7 +332,7 @@ body { background-color: #fff; color: #333333; font-family: 'Helvetica Neue', He
 
 .caption big a:hover, .caption big a:active { text-decoration: underline; }
 
-img.thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ease; filter: brightness(0.8); transition: filter 0.3s ease; }
+img.project-thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ease; filter: brightness(0.8); transition: filter 0.3s ease; }
 
 .square { width: 363.5px; height: 363.5px; }
 
@@ -342,7 +342,9 @@ img.thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ease; filt
 
 .photo-gallery > div { flex: 1 1 calc(33.333% - 10px); min-width: 200px; }
 
-.photo-gallery img.thmbnl { width: 100%; height: auto; object-fit: cover; border-radius: 8px; }
+.photo-gallery img.project-thmbnl { width: 100%; height: auto; object-fit: cover; border-radius: 8px; }
+
+.photo-gallery img.gallery-thmbnl { width: 100%; height: auto; object-fit: cover; border-radius: 8px; }
 
 .text-bubble { border-radius: 10px; padding: 3px 5px; display: inline-block; max-width: 300px; }
 
