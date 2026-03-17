@@ -41,8 +41,8 @@
               {% else %}
                 <div>
               {% endif %}
-              {% if p.extname == '.jpg' or p.extname == '.jpeg' or p.extname == '.png' %}
-                <img class="thmbnl" src="{{ p.path }}" alt="photo">
+              {% if p.extname == '.jpg' or p.extname == '.jpeg' or p.extname == '.png' or p.extname == '.JPG' or p.extname == '.JPEG' or p.extname == '.PNG' %}
+                <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
               {% elsif p.extname == '.txt' %}
                 <iframe
                   class="thmbnl"
@@ -54,7 +54,6 @@
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
-                </div>
               {% endif %}
               </div>
             {% endif %}

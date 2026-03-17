@@ -37,7 +37,7 @@
 
       <div class="photo-gallery">
         {% for p in site.static_files %}
-          {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' or p.extname == '.jpg' or p.extname == '.png' %}
+          {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' or p.extname == '.jpg' or p.extname == '.PNG' %}
               <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
           {% elsif p.path contains page.dir and p.path contains '/photos/' and p.extname == '.txt' %}
             <iframe
