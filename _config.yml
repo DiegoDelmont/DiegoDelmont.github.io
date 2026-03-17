@@ -4,3 +4,6 @@ plugins:
 
 title: Diego Delmont's Portfolio
 description: A library of my wonderful work.
+
+url: "https://DiegoDelmont.github.io"
+baseurl: ""

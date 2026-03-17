@@ -30,28 +30,36 @@
       <div style="text-align: center; font-size: 20px;">
         <b>{{page.long_description}}</b>
       </div>
-
-      <div class="photo-gallery">
-        {% for p in site.static_files %}
-          {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' or p.extname == '.jpg' or p.extname == '.png' %}
-            <div>
-              <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
-            </div>
-          {% elsif p.path contains page.dir and p.path contains '/photos/' and p.extname == '.txt' %}
-            <iframe
-              class="thmbnl"
-              width="530"
-              height="300"
-              src="https://www.youtube.com/embed/{{ p.basename }}?loop=1&playlist={{ p.basename }}"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
-              allowfullscreen>
-            </iframe>
-            <span class="see-more">see more</span>
-          {% endif %}
-        {% endfor %}
-      </div>
+        <div class="photo-gallery">
+          {% for p in site.static_files %}
+            {% if p.path contains page.dir and p.path contains '/photos/' %}
+              {% assign first_char = p.basename | slice: 0 %}
+              {% if first_char == 'H' %}
+                <div class="landscape">
+              {% elsif first_char == 'V' %}
+                <div class="portrait">
+              {% else %}
+                <div>
+              {% endif %}
+              {% if p.extname == '.jpg' or p.extname == '.jpeg' or p.extname == '.png' %}
+                <img class="thmbnl" src="{{ p.path }}" alt="photo">
+              {% elsif p.extname == '.txt' %}
+                <iframe
+                  class="thmbnl"
+                  width="100%"
+                  height="auto"
+                  src="https://www.youtube.com/embed/{{ p.basename }}?loop=1&playlist={{ p.basename }}"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+                </div>
+              {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
       {{ content }}
 
       <footer class="site-footer">

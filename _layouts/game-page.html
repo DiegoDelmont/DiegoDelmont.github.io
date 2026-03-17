@@ -38,14 +38,12 @@
       <div class="photo-gallery">
         {% for p in site.static_files %}
           {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' or p.extname == '.jpg' or p.extname == '.png' %}
-            <div>
               <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
-            </div>
           {% elsif p.path contains page.dir and p.path contains '/photos/' and p.extname == '.txt' %}
             <iframe
               class="thmbnl"
-              width="560"
-              height="315"
+              width="100%"
+              height="auto"
               src="https://www.youtube.com/embed/{{ p.basename }}?loop=1&playlist={{ p.basename }}"
               title="YouTube video player"
               frameborder="0"

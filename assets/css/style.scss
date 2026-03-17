@@ -58,6 +58,7 @@ img.project-thmbnl:hover{
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   gap: 15px;
   margin: 20px 0;
 }
@@ -67,17 +68,27 @@ img.project-thmbnl:hover{
   min-width: 200px;
 }
 
+.photo-gallery > div.landscape {
+  aspect-ratio: 16 / 9; /* Landscape for files starting with 'H' */
+}
+
+.photo-gallery > div.portrait {
+  aspect-ratio: 9 / 16; /* Portrait for files starting with 'V' */
+}
+
 .photo-gallery img.project-thmbnl {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 8px;
 }
 
 .photo-gallery img.gallery-thmbnl {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 8px;
 }
 
