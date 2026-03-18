@@ -23,8 +23,6 @@
       <a href="/personal" class="btn">Personal</a>
       <a href="/modeling" class="btn">3D Modeling</a>
       <a href="/ui_ux" class="btn">UI/UX</a>
-      <a href="/design" class="btn">Game Design</a>
-
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -34,25 +32,24 @@
       <i style="color: black; font-size: 62px;"> <b>{{page.title}}</b> </i>
       <!-- long description -->
       <div>{{page.long_description}}</div>
-
       <div class="photo-gallery">
-        {% for p in site.static_files %}
-          {% if p.path contains page.dir and p.path contains '/photos/' and p.extname == '.jpeg' or p.extname == '.jpg' or p.extname == '.PNG' %}
-              <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
-          {% elsif p.path contains page.dir and p.path contains '/photos/' and p.extname == '.txt' %}
-            <iframe
-              class="thmbnl"
-              width="100%"
-              height="auto"
-              src="https://www.youtube.com/embed/{{ p.basename }}?loop=1&playlist={{ p.basename }}"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; "
-              allowfullscreen>
-            </iframe>
-          {% endif %}
-        {% endfor %}
-      </div>
+          {% for p in site.static_files %}
+            {% if p.path contains page.dir and p.path contains '/photos/'%}
+              {% assign first_char = p.basename | slice: 0 %}
+              {% if first_char == 'H' %}
+                <div class="landscape">
+              {% elsif first_char == 'V' %}
+                <div class="portrait">
+              {% else %}
+                <div>
+              {% endif %}
+              {% if p.extname == '.jpg' or p.extname == '.jpeg' or p.extname == '.png' or p.extname == '.JPG' or p.extname == '.JPEG' or p.extname == '.PNG' %}
+                <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
+              {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
       {{ content }}
 
       <footer class="site-footer">

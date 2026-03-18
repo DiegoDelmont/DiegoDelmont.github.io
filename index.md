@@ -7,5 +7,9 @@ layout: about-me
 
 <big style="color: black;"><b> Please enjoy and explore! </b></big>
 
-
 <h2> <a class="underlined" target="_blank" href="/Diego%20Resume%20-%20Mar.%202026.pdf"> My resume </a> </h2>
+
+<small> 
+this site was made using Github Pages and Jekyll. <br>
+<i style="color: black;"> Also! I quickly learned how to program a site so that I could put all my work into one place. Please don't let this nascent site serve as a reflection of my ui/ux capabilities!</i>
+</small>

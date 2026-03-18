@@ -23,44 +23,40 @@
       <a href="/personal" class="btn">Personal</a>
       <a href="/modeling" class="btn">3D Modeling</a>
       <a href="/ui_ux" class="btn">UI/UX</a>
-      <a href="/design" class="btn">Game Design</a>
-
     </header>
 
     <main id="content" class="main-content" role="main">
 
-
       {{ content }}
 
-      <div>
-        <div class="project_row">
-          {% for p in site.pages %}
-            {% if p.url != page.url and p.url contains page.dir and p.name == "index.md" %}
-              <div class="square">
-                <div>
-                  <a href="{{ p.url }}">
-                    <img class="project-thmbnl" src="{{ p.url }}banner.png" alt="failed to load thumbnail">
-                  </a>
-                </div>
-                <div class="caption">
-                  <big><b><a href="{{ p.url }}">{{ p.title | default: p.name }}</a></b></big>, {{ p.year }}
-                  <br/>
-                  {% if p.from %}
-                    <small><big><a target="_blank" href="{{ p.link }}">{{ p.from }}</a></big></small>
-                  <br/>
-                  {% endif %}
-                  {% if p.roles %}
-                    {% for role in p.roles %}
-                      <div class="text-bubble role-{{ role | slugify }}" style="font-size: 14px; color: white;">
-                        {{ role }}
-                      </div>
-                    {% endfor %}
-                  {% endif %}
-                </div>
+      <div class="project_row">
+        {% for p in site.pages %}
+          {% if p.url != page.url and p.url contains page.dir and p.name == "index.md" %}
+            <div class="square">
+              <div>
+                <a href="{{ p.url }}">
+                  <img class="project-thmbnl" src="{{ p.url }}banner.png" alt="failed to load thumbnail">
+                </a>
               </div>
-            {% endif %}
-          {% endfor %}
-        </div>
+              <div class="caption">
+                <big><b><a href="{{ p.url }}">{{ p.title | default: p.name }}</a></b></big>, {{ p.year }}
+                <br/>
+                {% if p.from %}
+                  <small><big><a target="_blank" href="{{ p.link }}">{{ p.from }}</a></big></small>
+                <br/>
+                {% endif %}
+                {% if p.roles %}
+                  {% for role in p.roles %}
+                    <div class="text-bubble role-{{ role | slugify }}" style="font-size: 14px; color: white;">
+                      {{ role }}
+                    </div>
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
 
       <footer class="site-footer">
         <h2>Contact Me!</h2>

@@ -34,14 +34,14 @@ body {
 }
 
 // project organization n placeholders
-.photo-gallery img.project-thmbnl:hover{
+img.project-thmbnl:hover{
     transform: scale(1.05);
     transition: transform 0.3s ease; 
     filter: brightness(0.8);
     transition: filter 0.3s ease;
 }
 
-.photo-gallery img.project-thmbnl {
+img.project-thmbnl {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -49,13 +49,7 @@ body {
   border-radius: 8px;
 }
 
-.photo-gallery img.gallery-thmbnl:hover{
-    transform: scale(2.5);
-    transition: transform 1s linear 0.3s; 
-}
-
 .photo-gallery img.gallery-thmbnl {
-    transition: transform 1s ease-out; 
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
@@ -79,14 +73,18 @@ body {
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  flex-direction: row;
   gap: 15px;
-  margin: 20px 0;
 }
 
 .photo-gallery > div {
-  flex: 1 1 calc(33.333% - 10px);
+  flex: 0 1 calc(33.333% - 10px);
   min-width: 200px;
+}
+
+.photo-gallery > div.video {
+  flex: 0 1 calc(66.666% - 10px); /* takes up 2 columns worth of space */
+  aspect-ratio: 16 / 9;
 }
 
 .photo-gallery > div.landscape {
@@ -103,6 +101,7 @@ body {
     padding: 3px 5px;
     display: inline-block;
     max-width: 300px;
+    pointer-events: none;
 }
 //role colors
 .text-bubble.role-play-tester {
