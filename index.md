@@ -11,5 +11,5 @@ layout: about-me
 
 <small> 
 this site was made using Github Pages and Jekyll. <br>
-<i style="color: black;"> Also! I quickly learned how to program a site so that I could put all my work into one place. Please don't let this nascent site serve as a reflection of my ui/ux capabilities!</i>
+<i style="color: black;"> Also! I quickly learned how to program a site so that I could put all my work into one place. Don't let this site's nascency serve as a reflection of my ui/ux capabilities. It is a work in progress!</i>
 </small>
