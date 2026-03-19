@@ -95,6 +95,15 @@ img.project-thmbnl {
   aspect-ratio: 9 / 16; /* Portrait for files starting with 'V' */
 }
 
+.photo-gallery a:hover img {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: scale(1);
+}
+
+.photo-gallery a img {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 //role tags
 .text-bubble {
     border-radius: 10px;

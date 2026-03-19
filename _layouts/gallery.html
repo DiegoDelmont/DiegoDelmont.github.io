@@ -31,34 +31,41 @@
       </div>
         {% for section in page.sections %}
           <b style="color: black; font-size: 48px;"> {{ section.name }}</b>
+          <div style="color: black; font-size: 18px;"> {{ section.description }} </div>
           <div class="photo-gallery">
             {% for p in site.static_files %}
               {% if p.path contains page.dir and p.path contains '/photos/' and p.path contains section.folder %}
+              {% unless p.basename contains 'exclude_' %}  
                 {% assign first_char = p.basename | slice: 0 %}
-                {% if p.extname == '.txt' %}
-                  <div class="video">
-                {% elsif first_char == 'H' %}
-                  <div class="landscape">
-                {% elsif first_char == 'V' %}
-                  <div class="portrait">
-                {% else %}
-                  <div>
-                {% endif %}
-                {% if p.extname == '.jpg' or p.extname == '.jpeg' or p.extname == '.png' or p.extname == '.JPG' or p.extname == '.JPEG' or p.extname == '.PNG' %}
-                  <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
-                {% elsif p.extname == '.txt' %}
-                  <iframe
-                    class="gallery-thmbnl"
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/{{ p.basename }}?loop=1&playlist={{ p.basename }}"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
-                {% endif %}
-                </div>
+                  {% if p.extname == '.txt' %}
+                    <div class="video">
+                  {% elsif first_char == 'H' %}
+                    <div class="landscape">
+                  {% elsif first_char == 'V' %}
+                    <div class="portrait">
+                  {% else %}
+                    <div>
+                  {% endif %}
+                  {% if p.extname == '.jpg' or p.extname == '.jpeg' or p.extname == '.png' or p.extname == '.JPG' or p.extname == '.JPEG' or p.extname == '.PNG' %}
+                      <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
+                  {% elsif p.extname == '.txt' %}
+                    <iframe
+                      class="gallery-thmbnl"
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/{{ p.basename }}?loop=1&playlist={{ p.basename }}"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen>
+                    </iframe>
+                  {% elsif p.extname == '.pdf' %}
+                    <a target="_blank" href="{{ p.path }}">
+                      <img class="gallery-thmbnl" src="{{ p.path | replace: p.basename | replace: '.pdf', '' | append: 'exclude_' | append: p.basename }}.PNG" alt="document">
+                    </a>
+                  {% endif %}
+                  </div>
+                {% endunless %}
               {% endif %}
             {% endfor %}
           </div>
