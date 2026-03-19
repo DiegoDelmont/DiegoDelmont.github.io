@@ -53,7 +53,6 @@ img.project-thmbnl {
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
-    max-height: 50x;
 }
 
 .square {
@@ -96,12 +95,21 @@ img.project-thmbnl {
 }
 
 .photo-gallery a:hover img {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transform: scale(1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transform: scale(1.05);
 }
 
 .photo-gallery a img {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo-gallery a img.itch-thmbnl {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery a:hover img.itch-thmbnl {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 
 //role tags

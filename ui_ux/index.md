@@ -6,4 +6,5 @@ long_description: A gallery of UI/UX and graphic design work I've done on my per
 sections:
   - name: "" 
     folder: "personal"
+  
 ---

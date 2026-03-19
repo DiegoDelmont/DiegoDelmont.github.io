@@ -336,7 +336,7 @@ img.project-thmbnl:hover { transform: scale(1.05); transition: transform 0.3s ea
 
 img.project-thmbnl { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px; }
 
-.photo-gallery img.gallery-thmbnl { object-fit: cover; object-position: center; border-radius: 8px; max-height: 50x; }
+.photo-gallery img.gallery-thmbnl { object-fit: cover; object-position: center; border-radius: 8px; }
 
 .square { width: 363.5px; height: 363.5px; }
 
@@ -352,9 +352,13 @@ img.project-thmbnl { width: 100%; height: 100%; object-fit: cover; object-positi
 
 .photo-gallery > div.portrait { aspect-ratio: 9 / 16; /* Portrait for files starting with 'V' */ }
 
-.photo-gallery a:hover img { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); transform: scale(1); }
+.photo-gallery a:hover img { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); transform: scale(1.05); }
 
 .photo-gallery a img { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+
+.photo-gallery a img.itch-thmbnl { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+.photo-gallery a:hover img.itch-thmbnl { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); transform: scale(1.05); }
 
 .text-bubble { border-radius: 10px; padding: 3px 5px; display: inline-block; max-width: 300px; pointer-events: none; }
 

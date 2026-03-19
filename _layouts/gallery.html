@@ -33,19 +33,25 @@
           <b style="color: black; font-size: 48px;"> {{ section.name }}</b>
           <div style="color: black; font-size: 18px;"> {{ section.description }} </div>
           <div class="photo-gallery">
+            {% assign is_itch = section.folder | slice: 0, 5 %}
             {% for p in site.static_files %}
               {% if p.path contains page.dir and p.path contains '/photos/' and p.path contains section.folder %}
-              {% unless p.basename contains 'exclude_' %}  
-                {% assign first_char = p.basename | slice: 0 %}
-                  {% if p.extname == '.txt' %}
-                    <div class="video">
-                  {% elsif first_char == 'H' %}
-                    <div class="landscape">
-                  {% elsif first_char == 'V' %}
-                    <div class="portrait">
-                  {% else %}
-                    <div>
-                  {% endif %}
+                {% if is_itch == 'itch_' %}
+                    <a href="{{ section.link }}" target="_blank">
+                      <img class="itch-thmbnl" src="{{ p.path }}" alt="{{ section.name }}">
+                    </a>
+                {% endif %}
+                {% unless p.basename contains 'exclude_' or is_itch == 'itch_' %}
+                  {% assign first_char = p.basename | slice: 0 %}
+                    {% if p.extname == '.txt' %}
+                      <div class="video">
+                    {% elsif first_char == 'H' %}
+                      <div class="landscape">
+                    {% elsif first_char == 'V' %}
+                      <div class="portrait">
+                    {% else %}
+                      <div>
+                    {% endif %}
                   {% if p.extname == '.jpg' or p.extname == '.jpeg' or p.extname == '.png' or p.extname == '.JPG' or p.extname == '.JPEG' or p.extname == '.PNG' %}
                       <img class="gallery-thmbnl" src="{{ p.path }}" alt="photo">
                   {% elsif p.extname == '.txt' %}
