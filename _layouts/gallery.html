@@ -67,7 +67,7 @@
                     </iframe>
                   {% elsif p.extname == '.pdf' %}
                     <a target="_blank" href="{{ p.path }}">
-                      <img class="gallery-thmbnl" src="{{ p.path | replace: p.basename | replace: '.pdf', '' | append: 'exclude_' | append: p.basename }}.png" alt="document">
+                      <img class="gallery-thmbnl" src="{{ p.path | replace: p.basename | replace: '.pdf', '' | append: 'exclude_' | append: p.basename }}.jpg" alt="document">
                     </a>
                   {% endif %}
                   </div>
