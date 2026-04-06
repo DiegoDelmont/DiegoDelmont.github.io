@@ -12,6 +12,11 @@ sections:
     folder: "itch_tagandgoseek"
     link: https://diegodelmont.itch.io/tag-and-go-seek
 
+  - name: "Retro Specter"
+    description: "IGDA Clark's February Frenzy Game Jam | Theme: Retro"
+    folder: "itch_retrospecter"
+    link: https://rawsome1234.itch.io/retrospecter
+
   - name: "Song of Pheona" 
     description: "My final project for a world building course." 
     folder: "pheona"
