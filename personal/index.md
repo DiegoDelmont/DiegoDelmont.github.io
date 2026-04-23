@@ -1,6 +1,6 @@
 ---
 title: "Personal Projects"
-description: These are the games I've been a part of during my free time or for classes.
+description: These are the games / prototypes I've been a part of during my free time or for classes.
 layout: gallery
 sections:
   - name: "fish poker game"
